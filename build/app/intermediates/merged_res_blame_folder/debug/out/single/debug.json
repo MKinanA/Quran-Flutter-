@@ -4,8 +4,8 @@
         "source": "com.example.quran.app-main-5:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.quran.app-merged_res-11:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.example.quran.app-main-5:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-mdpi_icon.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-mdpi/icon.png"
     },
     {
         "merged": "com.example.quran.app-merged_res-11:/drawable_launch_background.xml.flat",
@@ -16,15 +16,35 @@
         "source": "com.example.quran.app-main-5:/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-xxhdpi_icon.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-xxhdpi/icon.png"
+    },
+    {
         "merged": "com.example.quran.app-merged_res-11:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.example.quran.app-main-5:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.quran.app-merged_res-11:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.example.quran.app-main-5:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-xhdpi_icon.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-xhdpi/icon.png"
     },
     {
         "merged": "com.example.quran.app-merged_res-11:/drawable-v21_launch_background.xml.flat",
         "source": "com.example.quran.app-main-5:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-xxxhdpi_icon.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-xxxhdpi/icon.png"
+    },
+    {
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-hdpi_icon.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "com.example.quran.app-merged_res-11:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.quran.app-main-5:/mipmap-mdpi/ic_launcher.png"
     }
 ]
