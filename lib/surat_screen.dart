@@ -24,7 +24,7 @@ class SuratScreen extends StatelessWidget {
                     )
                   ),
                   Text(
-                    '${surat.name}',
+                    surat.name,
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
@@ -63,7 +63,7 @@ class SuratScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text(
-                      '${ayat.content}',
+                      ayat.content,
                       textAlign: TextAlign.start,
                       textDirection: TextDirection.rtl,
                       style: const TextStyle(
@@ -77,7 +77,7 @@ class SuratScreen extends StatelessWidget {
                     height: 8.0,
                   ),
                   Text(
-                    '${ayat.contentLt}',
+                    ayat.contentLt,
                     style: const TextStyle(
                       fontSize: 14.0,
                       fontWeight: FontWeight.w600
@@ -87,7 +87,7 @@ class SuratScreen extends StatelessWidget {
                     height: 8.0,
                   ),
                   Text(
-                    '${ayat.contentTr}',
+                    ayat.contentTr,
                     style: const TextStyle(
                       fontSize: 14.0,
                       fontWeight: FontWeight.w600

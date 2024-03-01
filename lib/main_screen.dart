@@ -67,14 +67,14 @@ class MainScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    '${surat.nameLt}',
+                                    surat.nameLt,
                                     style: const TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold
                                     )
                                   ),
                                   Text(
-                                    '${surat.nameTr}',
+                                    surat.nameTr,
                                     style: const TextStyle(
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.normal
@@ -83,7 +83,7 @@ class MainScreen extends StatelessWidget {
                                 ]
                               ),
                               Text(
-                                '${surat.name}',
+                                surat.name,
                                 textDirection: TextDirection.rtl,
                                 style: const TextStyle(
                                   fontSize: 32.0,
@@ -107,7 +107,7 @@ class MainScreen extends StatelessWidget {
                                 )
                               ),
                               Text(
-                                '${surat.origin}',
+                                surat.origin,
                                 style: const TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal
