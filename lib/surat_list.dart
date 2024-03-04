@@ -32,7 +32,7 @@ class Ayat {
   });
 }
 
-var suratList = [ // retrieved using get_surat.py
+var suratList = [
   Surat(
     number: 1,
     name: 'الفاتحة',
