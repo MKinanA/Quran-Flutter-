@@ -1,0 +1,4 @@
+#Tue Mar 05 09:11:22 WIB 2024
+base.0=D\:\\Development\\Flutter Projects\\quran\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
