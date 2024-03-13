@@ -28,7 +28,8 @@ class SuratScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 18.0
+                      fontSize: 18.0,
+                      fontFamily: 'Uthmanic Hafs'
                     )
                   )
                 ]
@@ -41,64 +42,67 @@ class SuratScreen extends StatelessWidget {
           ]
         )
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemBuilder: (context, index) {
           final Ayat ayat = surat.ayat[index];
-          return Card(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '${ayat.number}',
+          return Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${ayat.number}',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.0
+                  )
+                ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    ayat.content,
+                    textAlign: TextAlign.start,
+                    textDirection: TextDirection.rtl,
                     style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0
-                    )
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      ayat.content,
-                      textAlign: TextAlign.start,
-                      textDirection: TextDirection.rtl,
-                      style: const TextStyle(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Noto Naskh Arabic'
-                      )
-                    )
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    ayat.contentLt,
-                    style: const TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600
-                    )
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    ayat.contentTr,
-                    style: const TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600
+                      fontSize: 20.0,
+                      fontFamily: 'Uthmanic Hafs'
                     )
                   )
-                ]
-              )
+                ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  ayat.contentLt,
+                  style: const TextStyle(
+                    fontSize: 14.0
+                  )
+                ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  ayat.contentTr,
+                  style: const TextStyle(
+                    fontSize: 14.0
+                  )
+                )
+              ]
             )
           );
         },
-        itemCount: surat.ayat.length
+        itemCount: surat.ayat.length,
+        separatorBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 16.0
+            ),
+            child: Divider()
+          );
+        }
       )
     );
   }
