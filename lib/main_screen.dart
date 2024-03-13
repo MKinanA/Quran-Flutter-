@@ -25,7 +25,7 @@ class MainScreen extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
-                fontFamily: 'Uthmanic Hafs'
+                fontFamily: 'Noto Naskh Arabic'
               )
             )
           ]
@@ -88,7 +88,7 @@ class MainScreen extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 32.0,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: 'Uthmanic Hafs'
+                                fontFamily: 'Noto Naskh Arabic'
                               )
                             )
                           ]

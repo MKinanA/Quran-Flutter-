@@ -91,9 +91,9 @@ flutter:
     - family: Noto Sans
       fonts:
         - asset: assets/NotoSans.ttf
-    - family: Uthmanic Hafs
+    - family: Noto Naskh Arabic
       fonts:
-        - asset: assets/UthmanicHafs_V22.ttf
+        - asset: assets/NotoNaskhArabic.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

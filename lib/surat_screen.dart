@@ -29,7 +29,7 @@ class SuratScreen extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18.0,
-                      fontFamily: 'Uthmanic Hafs'
+                      fontFamily: 'Noto Naskh Arabic'
                     )
                   )
                 ]
@@ -68,7 +68,7 @@ class SuratScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
                       fontSize: 20.0,
-                      fontFamily: 'Uthmanic Hafs'
+                      fontFamily: 'Noto Naskh Arabic'
                     )
                   )
                 ),
