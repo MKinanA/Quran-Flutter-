@@ -63,7 +63,7 @@ class SuratScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    ayat.content,
+                    ayat.content.replaceAll(' ࣖ', ''),
                     textAlign: TextAlign.start,
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
