@@ -4,6 +4,19 @@
       jars="D:\Development\Flutter Projects\quran\build\app\intermediates\flutter\release\libs.jar"
       resolved="__local_aars__:D:\Development\Flutter Projects\quran\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
+      name="D:\Development\Flutter Projects\quran\android@@:path_provider_android::release"
+      jars="D:\Development\Flutter Projects\quran\build\path_provider_android\.transforms\5e983ee04593d5c6dd23e843ab1cf041\transformed\out\jars\classes.jar;D:\Development\Flutter Projects\quran\build\path_provider_android\.transforms\5e983ee04593d5c6dd23e843ab1cf041\transformed\out\jars\libs\R.jar"
+      resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
+      folder="D:\Development\Flutter Projects\quran\build\path_provider_android\.transforms\5e983ee04593d5c6dd23e843ab1cf041\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="io.flutter:flutter_embedding_release:1.0.0-04817c99c9fd4956f27505204f7e344335810aed@jar"
       jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-04817c99c9fd4956f27505204f7e344335810aed\32809c8dc647f1ac834899bf9e489202692ad1b2\flutter_embedding_release-1.0.0-04817c99c9fd4956f27505204f7e344335810aed.jar"
       resolved="io.flutter:flutter_embedding_release:1.0.0-04817c99c9fd4956f27505204f7e344335810aed"/>
@@ -57,22 +70,6 @@
       name="io.flutter:x86_64_release:1.0.0-04817c99c9fd4956f27505204f7e344335810aed@jar"
       jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-04817c99c9fd4956f27505204f7e344335810aed\9a40d6a486e44cdca88de950fef76ef42a2421d8\x86_64_release-1.0.0-04817c99c9fd4956f27505204f7e344335810aed.jar"
       resolved="io.flutter:x86_64_release:1.0.0-04817c99c9fd4956f27505204f7e344335810aed"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar"
-      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
-      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
-      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.7.10\bac80c520d0a9e3f3673bc2658c6ed02ef45a76a\kotlin-stdlib-common-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
-  <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-java8\2.2.0\cd3478503da69b1a7e0319bd2d1389943db9b364\lifecycle-common-java8-2.2.0.jar"
@@ -259,9 +256,25 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.annotation:annotation:1.2.0@jar"
-      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation\1.2.0\57136ff68ee784c6e19db34ed4a175338fadfde1\annotation-1.2.0.jar"
-      resolved="androidx.annotation:annotation:1.2.0"/>
+      name="androidx.annotation:annotation-jvm:1.7.1@jar"
+      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation-jvm\1.7.1\920472d40adcdef5e18708976b3e314f9a636fcd\annotation-jvm-1.7.1.jar"
+      resolved="androidx.annotation:annotation-jvm:1.7.1"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar"
+      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
+      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
+      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.7.10\bac80c520d0a9e3f3673bc2658c6ed02ef45a76a\kotlin-stdlib-common-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="C:\Users\mkina\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.annotation:annotation-experimental:1.1.0@aar"
       jars="C:\Users\mkina\.gradle\caches\transforms-3\09db32a73384ac2dccccf916d7dc0262\transformed\jetified-annotation-experimental-1.1.0\jars\classes.jar"

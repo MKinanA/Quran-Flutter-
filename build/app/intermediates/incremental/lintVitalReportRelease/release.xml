@@ -1,6 +1,6 @@
 <variant
     name="release"
-    package="com.example.quran"
+    package="com.mkinana.quran"
     minSdkVersion="19"
     targetSdkVersion="33"
     shrinking="true"
@@ -33,7 +33,7 @@
   </manifestPlaceholders>
   <mainArtifact
       classOutputs="D:\Development\Flutter Projects\quran\build\app\intermediates\javac\release\classes;D:\Development\Flutter Projects\quran\build\app\tmp\kotlin-classes\release;D:\Development\Flutter Projects\quran\build\app\kotlinToolingMetadata;D:\Development\Flutter Projects\quran\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
-      applicationId="com.example.quran"
+      applicationId="com.mkinana.quran"
       generatedSourceFolders="D:\Development\Flutter Projects\quran\build\app\generated\ap_generated_sources\release\out;D:\Development\Flutter Projects\quran\build\app\generated\aidl_source_output_dir\release\out;D:\Development\Flutter Projects\quran\build\app\generated\source\buildConfig\release;D:\Development\Flutter Projects\quran\build\app\generated\renderscript_source_output_dir\release\out"
       generatedResourceFolders="D:\Development\Flutter Projects\quran\build\app\generated\res\rs\release;D:\Development\Flutter Projects\quran\build\app\generated\res\resValues\release">
   </mainArtifact>

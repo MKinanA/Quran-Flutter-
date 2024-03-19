@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.quran.app-mergeReleaseResources-9:/values-cs/values-cs.xml",
+            "outputFile": "com.mkinana.quran.app-mergeReleaseResources-9:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mkina\\.gradle\\caches\\transforms-3\\168e459aae59caaab0d2c703cf9d67ab\\transformed\\core-1.6.0\\res\\values-cs\\values-cs.xml",

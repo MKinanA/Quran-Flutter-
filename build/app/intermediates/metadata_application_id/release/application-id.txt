@@ -1,1 +1,1 @@
-com.example.quran
+com.mkinana.quran

@@ -130,7 +130,7 @@
 # The proguard configuration file for the following section is D:\Development\Flutter Projects\quran\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
 -keep class android.app.Application { <init>(); }
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
--keep class com.example.quran.MainActivity { <init>(); }
+-keep class com.mkinana.quran.MainActivity { <init>(); }
 
 # End of content from D:\Development\Flutter Projects\quran\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
 # The proguard configuration file for the following section is C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\proguard.txt
@@ -290,7 +290,7 @@
 }
 
 # End of content from C:\Users\mkina\.gradle\caches\transforms-3\45f58893a3b395d9758df204f662699b\transformed\lifecycle-viewmodel-2.1.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\mkina\.gradle\caches\transforms-3\38d7ac33a8f38551b83dece95e4d99f6\transformed\rules\lib\META-INF\proguard\androidx-annotations.pro
+# The proguard configuration file for the following section is C:\Users\mkina\.gradle\caches\transforms-3\563bca60fd7e4f2692e80de447961991\transformed\rules\lib\META-INF\proguard\androidx-annotations.pro
 -keep,allowobfuscation @interface androidx.annotation.Keep
 -keep @androidx.annotation.Keep class * {*;}
 
@@ -310,7 +310,7 @@
   @androidx.annotation.DoNotInline <methods>;
 }
 
-# End of content from C:\Users\mkina\.gradle\caches\transforms-3\38d7ac33a8f38551b83dece95e4d99f6\transformed\rules\lib\META-INF\proguard\androidx-annotations.pro
+# End of content from C:\Users\mkina\.gradle\caches\transforms-3\563bca60fd7e4f2692e80de447961991\transformed\rules\lib\META-INF\proguard\androidx-annotations.pro
 # The proguard configuration file for the following section is C:\Users\mkina\.gradle\caches\transforms-3\09db32a73384ac2dccccf916d7dc0262\transformed\jetified-annotation-experimental-1.1.0\proguard.txt
 # Copyright (C) 2020 The Android Open Source Project
 #

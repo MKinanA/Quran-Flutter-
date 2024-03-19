@@ -1,4 +1,4 @@
-com.example.quran
+com.mkinana.quran
 attr activityAction
 attr activityName
 attr alpha

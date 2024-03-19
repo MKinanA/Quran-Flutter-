@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///D:/Development/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -110,6 +116,54 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_foundation",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///D:/Development/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -164,13 +218,25 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "win32",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "quran",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-13T04:25:14.055112Z",
+  "generated": "2024-03-18T03:08:51.716525Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }

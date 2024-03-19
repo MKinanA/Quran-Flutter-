@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.quran"
+3    package="com.mkinana.quran"
 4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
@@ -24,7 +24,7 @@
 21        android:icon="@mipmap/icon"
 22        android:label="Quran" >
 23        <activity
-24            android:name="com.example.quran.MainActivity"
+24            android:name="com.mkinana.quran.MainActivity"
 25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
 26            android:exported="true"
 27            android:hardwareAccelerated="true"
