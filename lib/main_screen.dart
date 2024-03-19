@@ -11,16 +11,17 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Quran',
+              'Al-Quran',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20.0
+                fontSize: 18.0
               )
             ),
             Text(
-              'القرآن الكريم',
+              'القرآن',
               textDirection: TextDirection.rtl,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -34,6 +35,8 @@ class MainScreen extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) {
           final Surat surat = suratList[index];
+          final int bookmarks;
+          bookmarks = 10;
           return InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -61,7 +64,7 @@ class MainScreen extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +72,7 @@ class MainScreen extends StatelessWidget {
                                 Text(
                                   surat.nameLt,
                                   style: const TextStyle(
-                                    fontSize: 20.0,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.bold
                                   )
                                 ),
@@ -86,32 +89,38 @@ class MainScreen extends StatelessWidget {
                               surat.name,
                               textDirection: TextDirection.rtl,
                               style: const TextStyle(
-                                fontSize: 32.0,
+                                fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: 'Noto Naskh Arabic'
+                                fontFamily: 'LPMQ Isep Misbah'
                               )
                             )
                           ]
-                        ),
-                        const SizedBox(
-                          height: 2.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${surat.ayatCount} ayat',
+                              '${surat.ayatCount} ayat, ${surat.origin}',
                               style: const TextStyle(
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.normal
                               )
                             ),
-                            Text(
-                              surat.origin,
-                              style: const TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.normal
-                              )
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  '$bookmarks',
+                                  style: const TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal
+                                  )
+                                ),
+                                const Icon(
+                                  Icons.bookmark_border,
+                                  size: 20.0
+                                )
+                              ],
                             )
                           ]
                         )
@@ -127,7 +136,8 @@ class MainScreen extends StatelessWidget {
         separatorBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 16.0
+              horizontal: 16.0,
+              vertical: 0.0
             ),
             child: Divider()
           );

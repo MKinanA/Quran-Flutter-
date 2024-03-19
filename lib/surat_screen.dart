@@ -11,6 +11,7 @@ class SuratScreen extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               child: Row(
@@ -20,7 +21,7 @@ class SuratScreen extends StatelessWidget {
                     '${surat.number}. ${surat.nameLt}',
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 16.0
+                      fontSize: 18.0
                     )
                   ),
                   Text(
@@ -28,7 +29,7 @@ class SuratScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
+                      fontSize: 20.0,
                       fontFamily: 'Noto Naskh Arabic'
                     )
                   )
@@ -37,8 +38,7 @@ class SuratScreen extends StatelessWidget {
             ),
             const SizedBox(
               width: 2.0,
-            ),
-            const BookmarkButton()
+            )
           ]
         )
       ),
@@ -50,12 +50,19 @@ class SuratScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  '${ayat.number}',
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.0
-                  )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${ayat.number}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0
+                      )
+                    ),
+                    const BookmarkButton()
+                  ]
                 ),
                 const SizedBox(
                   height: 8.0,
@@ -63,17 +70,18 @@ class SuratScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    ayat.content.replaceAll(' ࣖ', ''),
+                    ayat.content,
                     textAlign: TextAlign.start,
                     textDirection: TextDirection.rtl,
                     style: const TextStyle(
                       fontSize: 20.0,
-                      fontFamily: 'Noto Naskh Arabic'
+                      fontFamily: 'LPMQ Isep Misbah',
+                      height: 2.0
                     )
                   )
                 ),
                 const SizedBox(
-                  height: 8.0,
+                  height: 16.0,
                 ),
                 Text(
                   ayat.contentLt,
@@ -82,7 +90,7 @@ class SuratScreen extends StatelessWidget {
                   )
                 ),
                 const SizedBox(
-                  height: 8.0,
+                  height: 12.0,
                 ),
                 Text(
                   ayat.contentTr,
