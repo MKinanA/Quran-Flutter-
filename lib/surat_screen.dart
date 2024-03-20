@@ -65,7 +65,7 @@ class SuratScreen extends StatelessWidget {
                   ]
                 ),
                 const SizedBox(
-                  height: 8.0
+                  height: 16.0
                 ),
                 Align(
                   alignment: Alignment.centerRight,
