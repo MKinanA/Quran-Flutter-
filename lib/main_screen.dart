@@ -57,7 +57,7 @@ class MainScreen extends StatelessWidget {
                     )
                   ),
                   const SizedBox(
-                    width: 16.0,
+                    width: 16.0
                   ),
                   Expanded(
                     child: Column(

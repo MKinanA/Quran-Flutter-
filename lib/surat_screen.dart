@@ -37,7 +37,7 @@ class SuratScreen extends StatelessWidget {
               )
             ),
             const SizedBox(
-              width: 2.0,
+              width: 2.0
             )
           ]
         )
@@ -65,7 +65,7 @@ class SuratScreen extends StatelessWidget {
                   ]
                 ),
                 const SizedBox(
-                  height: 8.0,
+                  height: 8.0
                 ),
                 Align(
                   alignment: Alignment.centerRight,
@@ -81,7 +81,7 @@ class SuratScreen extends StatelessWidget {
                   )
                 ),
                 const SizedBox(
-                  height: 16.0,
+                  height: 16.0
                 ),
                 Text(
                   ayat.contentLt,
@@ -90,7 +90,7 @@ class SuratScreen extends StatelessWidget {
                   )
                 ),
                 const SizedBox(
-                  height: 12.0,
+                  height: 12.0
                 ),
                 Text(
                   ayat.contentTr,
