@@ -14,6 +14,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "change_app_package_name",
+      "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/change_app_package_name-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/Users/mkina/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
@@ -236,7 +242,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-18T03:08:51.716525Z",
+  "generated": "2024-03-20T01:30:28.555517Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }
