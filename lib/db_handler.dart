@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'dart:convert';
 
-
-
 Future<String?> readFile(String filePath) async {
   try {
     File file = await File(filePath).create();
