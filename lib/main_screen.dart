@@ -91,7 +91,7 @@ class MainScreen extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: 'LPMQ Isep Misbah'
+                                fontFamily: 'Noto Naskh Arabic'
                               )
                             )
                           ]

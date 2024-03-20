@@ -4,7 +4,7 @@ import 'package:quran/surat_list.dart';
 class SuratScreen extends StatelessWidget {
   final Surat surat;
   const SuratScreen({Key? key, required this.surat}) : super(key: key);
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
