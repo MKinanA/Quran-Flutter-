@@ -82,7 +82,7 @@ class SuratScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: 'LPMQ Isep Misbah',
                                 fontSize: 24.0,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w900,
                                 height: 0.8
                               )
                             )
