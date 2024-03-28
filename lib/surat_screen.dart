@@ -1,9 +1,14 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:quran/surat_list.dart';
+import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SuratScreen extends StatelessWidget {
   final Surat surat;
-  const SuratScreen({Key? key, required this.surat}) : super(key: key);
+  final SharedPreferences db;
+  final Function updateCard;
+  const SuratScreen({Key? key, required this.surat, required this.db, required this.updateCard}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +59,63 @@ class SuratScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      '${ayat.number}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: (sajadah) {
+                        var list = <Widget>[
+                          Text(
+                            '${ayat.number}',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.0
+                            )
+                          )
+                        ];
+                        if (sajadah) {
+                          list += [
+                            const SizedBox(
+                              width: 24.0
+                            ),
+                            const Text(
+                              '۩',
+                              style: TextStyle(
+                                fontFamily: 'LPMQ Isep Misbah',
+                                fontSize: 24.0,
+                                height: 0.8
+                              )
+                            )
+                          ];
+                        }
+                        return list;
+                      }(
+                        ayat.content.contains('۩')
                       )
                     ),
-                    const BookmarkButton()
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            await Clipboard.setData(
+                              ClipboardData(
+                                text: 'Surat ${surat.nameLt} (${surat.number}) ayat ${ayat.number}:\n\n${ayat.content}\n\n${ayat.contentLt}\n\n${ayat.contentTr}'
+                              )
+                            );
+                            log('Copied to clipboard');
+                          },
+                          icon: const Icon(
+                            Icons.copy
+                          )
+                        ),
+                        BookmarkButton(
+                          ayatCode: '${surat.number}:${ayat.number}',
+                          db: db,
+                          updateCard: updateCard
+                        )
+                      ]
+                    )
                   ]
                 ),
                 const SizedBox(
@@ -76,7 +130,7 @@ class SuratScreen extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20.0,
                       fontFamily: 'LPMQ Isep Misbah',
-                      height: 2.0
+                      height: 2.25
                     )
                   )
                 ),
@@ -117,25 +171,36 @@ class SuratScreen extends StatelessWidget {
 }
 
 class BookmarkButton extends StatefulWidget {
-  const BookmarkButton({Key? key}) : super(key: key);
+  final String ayatCode;
+  final SharedPreferences db;
+  final Function updateCard;
+  const BookmarkButton({Key? key, required this.ayatCode, required this.db, required this.updateCard}) : super(key: key);
  
   @override
   BookmarkButtonState createState() =>  BookmarkButtonState();
 }
- 
+
 class BookmarkButtonState extends State<BookmarkButton> {
-  bool isBookmarked = false;
+  late bool isBookmarked;
 
   @override
   Widget build(BuildContext context) {
+    setState(() {
+      isBookmarked = widget.db.getBool(widget.ayatCode) ?? () {
+        widget.db.setBool(widget.ayatCode, false);
+        return false;
+      }();
+    });
     return IconButton(
       icon: Icon(
         isBookmarked ? Icons.bookmark : Icons.bookmark_border
         ),
-      onPressed: () {
+      onPressed: () async {
         setState(() {
           isBookmarked = !isBookmarked;
         });
+        await widget.db.setBool(widget.ayatCode, isBookmarked);
+        widget.updateCard();
       },
     );
   }

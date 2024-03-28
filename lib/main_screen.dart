@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:quran/surat_list.dart';
 import 'package:quran/surat_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  final SharedPreferences db;
+  const MainScreen({Key? key, required this.db}) : super(key: key);
  
   @override
   Widget build(BuildContext context) {
@@ -34,102 +38,9 @@ class MainScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {
-          final Surat surat = suratList[index];
-          final int bookmarks;
-          bookmarks = 10;
-          return InkWell(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SuratScreen(surat: surat);
-              }));
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    '${surat.number}',
-                    style: const TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold
-                    )
-                  ),
-                  const SizedBox(
-                    width: 16.0
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  surat.nameLt,
-                                  style: const TextStyle(
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold
-                                  )
-                                ),
-                                Text(
-                                  surat.nameTr,
-                                  style: const TextStyle(
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.normal
-                                  )
-                                )
-                              ]
-                            ),
-                            Text(
-                              surat.name,
-                              textDirection: TextDirection.rtl,
-                              style: const TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Noto Naskh Arabic'
-                              )
-                            )
-                          ]
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              '${surat.ayatCount} ayat, ${surat.origin}',
-                              style: const TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.normal
-                              )
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Text(
-                                  '$bookmarks',
-                                  style: const TextStyle(
-                                    fontSize: 14.0,
-                                    fontWeight: FontWeight.normal
-                                  )
-                                ),
-                                const Icon(
-                                  Icons.bookmark_border,
-                                  size: 20.0
-                                )
-                              ],
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  )
-                ]
-              )
-            )
+          return SuratCard(
+            surat: suratList[index],
+            db: db
           );
         },
         itemCount: suratList.length,
@@ -142,6 +53,137 @@ class MainScreen extends StatelessWidget {
             child: Divider()
           );
         }
+      )
+    );
+  }
+}
+
+class SuratCard extends StatefulWidget {
+  final Surat surat;
+  final SharedPreferences db;
+  const SuratCard({Key? key, required this.surat, required this.db}) : super(key: key);
+
+  @override
+  SuratCardState createState() => SuratCardState();
+}
+
+class SuratCardState extends State<SuratCard> {
+  int bookmarks = 0;
+
+  void updateBookmarks() {
+    setState(() {
+      bookmarks = 0;
+    });
+    for (int ayatNum = 1; ayatNum <= widget.surat.ayatCount; ayatNum++) {
+      if (widget.db.getBool('${widget.surat.number}:$ayatNum') ?? false) {
+        setState(() {
+          bookmarks ++;
+        });
+        log('found bookmark on ${widget.surat.number}:$ayatNum');
+      }
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    updateBookmarks();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return SuratScreen(surat: widget.surat, db: widget.db, updateCard: updateBookmarks);
+        }));
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              '${widget.surat.number}',
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold
+              )
+            ),
+            const SizedBox(
+              width: 16.0
+            ),
+            Expanded(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.surat.nameLt,
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold
+                            )
+                          ),
+                          Text(
+                            widget.surat.nameTr,
+                            style: const TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.normal
+                            )
+                          )
+                        ]
+                      ),
+                      Text(
+                        widget.surat.name,
+                        textDirection: TextDirection.rtl,
+                        style: const TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Noto Naskh Arabic'
+                        )
+                      )
+                    ]
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '${widget.surat.ayatCount} ayat, ${widget.surat.origin}',
+                        style: const TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.normal
+                        )
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            '$bookmarks',
+                            style: const TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.normal
+                            )
+                          ),
+                          const Icon(
+                            Icons.bookmark_border,
+                            size: 20.0
+                          )
+                        ],
+                      )
+                    ]
+                  )
+                ]
+              )
+            )
+          ]
+        )
       )
     );
   }

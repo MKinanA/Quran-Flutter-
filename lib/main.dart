@@ -1,28 +1,27 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:quran/main_screen.dart';
-import 'package:quran/db_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const App());
+void main() async {
+  log('started');
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(App(db: await SharedPreferences.getInstance()));
 }
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  final SharedPreferences db;
+  const App({Key? key, required this.db}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    logExternalStorageDirectorySync();
-    () async {
-      log('Bookmarks data: ${await getBookmarks()}');
-    }();
     return MaterialApp(
       title: 'Quran',
       theme: ThemeData(
         fontFamily: 'Noto Sans',
         brightness: MediaQuery.of(context).platformBrightness
       ),
-      home: const MainScreen()
+      home: MainScreen(db: db)
     );
   }
 }
