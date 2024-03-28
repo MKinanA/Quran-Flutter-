@@ -75,13 +75,14 @@ class SuratScreen extends StatelessWidget {
                         if (sajadah) {
                           list += [
                             const SizedBox(
-                              width: 24.0
+                              width: 20.0
                             ),
                             const Text(
                               '۩',
                               style: TextStyle(
                                 fontFamily: 'LPMQ Isep Misbah',
                                 fontSize: 24.0,
+                                fontWeight: FontWeight.bold,
                                 height: 0.8
                               )
                             )
