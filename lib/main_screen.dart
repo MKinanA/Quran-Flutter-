@@ -38,12 +38,35 @@ class MainScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {
-          return SuratCard(
-            surat: suratList[index],
-            db: db
-          );
+          if (index < 1) {
+            return const SizedBox();
+          } else if (index > suratList.length) {
+            return Container(
+              margin: const EdgeInsets.only(
+                top: 64.0,
+                bottom: 16.0
+              ),
+              width: double.infinity,
+              child: const Center(
+                child: Text(
+                  barakallah,
+                  style: TextStyle(
+                    fontFamily: 'LPMQ Isep Misbah',
+                    fontSize: 12.0,
+                    fontWeight: FontWeight.w100
+                  ),
+                  textAlign: TextAlign.center
+                )
+              )
+            );
+          } else {
+            return SuratCard(
+              surat: suratList[index - 1],
+              db: db
+            );
+          }
         },
-        itemCount: suratList.length,
+        itemCount: suratList.length + 2,
         separatorBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(
@@ -75,7 +98,10 @@ class SuratCardState extends State<SuratCard> {
       bookmarks = 0;
     });
     for (int ayatNum = 1; ayatNum <= widget.surat.ayatCount; ayatNum++) {
-      if (widget.db.getBool('${widget.surat.number}:$ayatNum') ?? false) {
+      if (widget.db.getBool('${widget.surat.number}:$ayatNum') ?? () {
+        widget.db.setBool('${widget.surat.number}:$ayatNum', false);
+        return false;
+      }()) {
         setState(() {
           bookmarks ++;
         });

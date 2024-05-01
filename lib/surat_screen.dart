@@ -62,7 +62,13 @@ class SuratScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.end,
-                      children: (sajadah) {
+                      children: (
+                        {
+                          bool sajadah = false,
+                          bool ain = false,
+                          bool thatMark = false
+                        }
+                      ) {
                         var list = <Widget>[
                           Text(
                             '${ayat.number}',
@@ -88,9 +94,42 @@ class SuratScreen extends StatelessWidget {
                             )
                           ];
                         }
+                        if (ain) {
+                          list += [
+                            const SizedBox(
+                              width: 20.0
+                            ),
+                            const Text(
+                              'ع',
+                              style: TextStyle(
+                                fontFamily: 'Noto Naskh Arabic',
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w900
+                              )
+                            )
+                          ];
+                        }
+                        if (thatMark) {
+                          list += [
+                            const SizedBox(
+                              width: 20.0
+                            ),
+                            const Text(
+                              '۞',
+                              style: TextStyle(
+                                fontFamily: 'Noto Naskh Arabic',
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w900,
+                                height: 1.1
+                              )
+                            )
+                          ];
+                        }
                         return list;
                       }(
-                        ayat.content.contains('۩')
+                        sajadah: ayat.content.contains('۩'),
+                        ain: ayat.content.contains(' ࣖ'),
+                        thatMark: ayat.content.contains('۞')
                       )
                     ),
                     Row(
@@ -105,6 +144,19 @@ class SuratScreen extends StatelessWidget {
                               )
                             );
                             log('Copied to clipboard');
+                            if (!context.mounted) return;
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Center(
+                                  child: Text(
+                                    'Ayat ${ayat.number} telah disalin',
+                                    style: Theme.of(context).textTheme.bodySmall
+                                  )
+                                ),
+                                duration: const Duration(seconds: 2),
+                                backgroundColor: Theme.of(context).colorScheme.background
+                              )
+                            );
                           },
                           icon: const Icon(
                             Icons.copy
