@@ -1,11 +1,11 @@
 {
-    "name": "quran",
-    "short_name": "quran",
+    "name": "Quran",
+    "short_name": "Quran",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Al-Qur'anul Karim, with Bahasa Indonesia translation, in your device",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
