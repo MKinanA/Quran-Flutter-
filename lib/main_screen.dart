@@ -52,7 +52,7 @@ class MainScreen extends StatelessWidget {
                   barakallah,
                   style: TextStyle(
                     fontFamily: 'LPMQ Isep Misbah',
-                    fontSize: 12.0,
+                    fontSize: 16.0,
                     fontWeight: FontWeight.w100
                   ),
                   textAlign: TextAlign.center
