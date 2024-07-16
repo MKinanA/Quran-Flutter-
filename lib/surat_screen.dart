@@ -154,7 +154,7 @@ class SuratScreen extends StatelessWidget {
                                   )
                                 ),
                                 duration: const Duration(seconds: 2),
-                                backgroundColor: Theme.of(context).colorScheme.background
+                                backgroundColor: Theme.of(context).colorScheme.surface
                               )
                             );
                           },
