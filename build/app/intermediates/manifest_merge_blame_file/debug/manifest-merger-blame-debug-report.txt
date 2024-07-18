@@ -5,8 +5,8 @@
 5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="19"
-9        android:targetSdkVersion="33" />
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
 12         the Flutter tool needs it to communicate with the running application
@@ -19,7 +19,7 @@
 17    <application
 18        android:name="android.app.Application"
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.6.0] C:\Users\mkina\.gradle\caches\transforms-3\168e459aae59caaab0d2c703cf9d67ab\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+19-->[androidx.core:core:1.6.0] C:\Users\mkina\.gradle\caches\transforms-3\7c1d12144b2ebda7a6da3814a09658ad\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:icon="@mipmap/icon"
 22        android:label="Quran" >
@@ -57,17 +57,17 @@
 54            android:value="2" />
 55
 56        <uses-library
-56-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+56-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 57            android:name="androidx.window.extensions"
-57-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+57-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 58            android:required="false" />
-58-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+58-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 59        <uses-library
-59-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+59-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 60            android:name="androidx.window.sidecar"
-60-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+60-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
 61            android:required="false" />
-61-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+61-->[androidx.window:window:1.0.0-beta04] C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 62    </application>
 63
 64</manifest>

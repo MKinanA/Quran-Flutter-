@@ -1,0 +1,1 @@
+ D:\\Development\\Flutter\ Projects\\quran\\.dart_tool\\flutter_build\\42068413b8b606b6f3f4a698d1fbeeae\\native_assets.yaml: 

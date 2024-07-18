@@ -1,7 +1,7 @@
-com.mkinana.quran.app-jetified-annotation-experimental-1.1.0-0 C:\Users\mkina\.gradle\caches\transforms-3\09db32a73384ac2dccccf916d7dc0262\transformed\jetified-annotation-experimental-1.1.0\res
-com.mkinana.quran.app-core-1.6.0-1 C:\Users\mkina\.gradle\caches\transforms-3\168e459aae59caaab0d2c703cf9d67ab\transformed\core-1.6.0\res
-com.mkinana.quran.app-jetified-window-1.0.0-beta04-2 C:\Users\mkina\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\res
-com.mkinana.quran.app-jetified-window-java-1.0.0-beta04-3 C:\Users\mkina\.gradle\caches\transforms-3\978180320ed1d29d66a82edc9d24751e\transformed\jetified-window-java-1.0.0-beta04\res
+com.mkinana.quran.app-jetified-annotation-experimental-1.1.0-0 C:\Users\mkina\.gradle\caches\transforms-3\0ee9e38e81120acb405b16317f88005e\transformed\jetified-annotation-experimental-1.1.0\res
+com.mkinana.quran.app-jetified-window-java-1.0.0-beta04-1 C:\Users\mkina\.gradle\caches\transforms-3\52327bdbb6080289c26b0e652865ef2f\transformed\jetified-window-java-1.0.0-beta04\res
+com.mkinana.quran.app-jetified-window-1.0.0-beta04-2 C:\Users\mkina\.gradle\caches\transforms-3\78fbd64af62dbdf102ba7c817970421b\transformed\jetified-window-1.0.0-beta04\res
+com.mkinana.quran.app-core-1.6.0-3 C:\Users\mkina\.gradle\caches\transforms-3\7c1d12144b2ebda7a6da3814a09658ad\transformed\core-1.6.0\res
 com.mkinana.quran.app-debug-4 D:\Development\Flutter Projects\quran\android\app\src\debug\res
 com.mkinana.quran.app-main-5 D:\Development\Flutter Projects\quran\android\app\src\main\res
 com.mkinana.quran.app-pngs-6 D:\Development\Flutter Projects\quran\build\app\generated\res\pngs\debug
@@ -10,4 +10,4 @@ com.mkinana.quran.app-rs-8 D:\Development\Flutter Projects\quran\build\app\gener
 com.mkinana.quran.app-mergeDebugResources-9 D:\Development\Flutter Projects\quran\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
 com.mkinana.quran.app-mergeDebugResources-10 D:\Development\Flutter Projects\quran\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
 com.mkinana.quran.app-merged_res-11 D:\Development\Flutter Projects\quran\build\app\intermediates\merged_res\debug
-com.mkinana.quran.app-packaged_res-12 D:\Development\Flutter Projects\quran\build\path_provider_android\intermediates\packaged_res\debug
+com.mkinana.quran.app-packaged_res-12 D:\Development\Flutter Projects\quran\build\shared_preferences_android\intermediates\packaged_res\debug

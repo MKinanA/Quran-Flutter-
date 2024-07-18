@@ -4,7 +4,7 @@
             "outputFile": "com.mkinana.quran.app-mergeDebugResources-9:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mkina\\.gradle\\caches\\transforms-3\\168e459aae59caaab0d2c703cf9d67ab\\transformed\\core-1.6.0\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "source": "C:\\Users\\mkina\\.gradle\\caches\\transforms-3\\7c1d12144b2ebda7a6da3814a09658ad\\transformed\\core-1.6.0\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
