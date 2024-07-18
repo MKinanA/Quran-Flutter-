@@ -158,30 +158,33 @@ class SuratScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          IconButton(
-                            onPressed: () async {
-                              await Clipboard.setData(
-                                ClipboardData(
-                                  text: 'Surat ${surat.nameLt} (${surat.number}) ayat ${ayat.number}:\n\n${ayat.content}\n\n${ayat.contentLt}\n\n${ayat.contentTr}'
-                                )
-                              );
-                              log('Copied to clipboard');
-                              if (!context.mounted) return;
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Center(
-                                    child: Text(
-                                      'Ayat ${ayat.number} telah disalin',
-                                      style: Theme.of(context).textTheme.bodySmall
-                                    )
-                                  ),
-                                  duration: const Duration(seconds: 2),
-                                  backgroundColor: Theme.of(context).colorScheme.surface
-                                )
-                              );
-                            },
-                            icon: const Icon(
-                              Icons.copy
+                          Tooltip(
+                            message: 'Copy',
+                            child: IconButton(
+                              onPressed: () async {
+                                await Clipboard.setData(
+                                  ClipboardData(
+                                    text: 'Surat ${surat.nameLt} (${surat.number}) ayat ${ayat.number}:\n\n${ayat.content}\n\n${ayat.contentLt}\n\n${ayat.contentTr}'
+                                  )
+                                );
+                                log('Copied to clipboard');
+                                if (!context.mounted) return;
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Center(
+                                      child: Text(
+                                        'Ayat ${ayat.number} telah disalin',
+                                        style: Theme.of(context).textTheme.bodySmall
+                                      )
+                                    ),
+                                    duration: const Duration(seconds: 2),
+                                    backgroundColor: Theme.of(context).colorScheme.surface
+                                  )
+                                );
+                              },
+                              icon: const Icon(
+                                Icons.copy
+                              )
                             )
                           ),
                           BookmarkButton(
@@ -267,17 +270,20 @@ class BookmarkButtonState extends State<BookmarkButton> {
         return false;
       }();
     });
-    return IconButton(
-      icon: Icon(
-        isBookmarked ? Icons.bookmark : Icons.bookmark_border
-        ),
-      onPressed: () async {
-        setState(() {
-          isBookmarked = !isBookmarked;
-        });
-        await widget.db.setBool(widget.ayatCode, isBookmarked);
-        widget.updateCard();
-      },
+    return Tooltip(
+      message: 'Bookmark',
+      child: IconButton(
+        icon: Icon(
+          isBookmarked ? Icons.bookmark : Icons.bookmark_border
+          ),
+        onPressed: () async {
+          setState(() {
+            isBookmarked = !isBookmarked;
+          });
+          await widget.db.setBool(widget.ayatCode, isBookmarked);
+          widget.updateCard();
+        },
+      )
     );
   }
 }
