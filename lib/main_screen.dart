@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
           } else if (index > suratList.length) {
             return Container(
               margin: const EdgeInsets.only(
-                top: 64.0,
+                top: 256.0,
                 bottom: 16.0
               ),
               width: double.infinity,
