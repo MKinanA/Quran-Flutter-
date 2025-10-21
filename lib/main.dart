@@ -21,6 +21,7 @@ class App extends StatelessWidget {
         fontFamily: 'Noto Sans',
         brightness: MediaQuery.of(context).platformBrightness
       ),
+      debugShowCheckedModeBanner: false,
       home: MainScreen(db: db)
     );
   }

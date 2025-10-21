@@ -36,6 +36,9 @@ class MainScreen extends StatelessWidget {
           ]
         )
       ),
+      drawer: const Drawer(
+        child: SizedBox()
+      ),
       body: ListView.separated(
         itemBuilder: (context, index) {
           if (index < 1) {

@@ -1,13 +1,13 @@
 class Surat {
-  int number;
-  String name;
-  String nameLt;
-  String nameTr;
-  String origin;
-  int ayatCount;
-  List<Ayat> ayat;
+  final int number;
+  final String name;
+  final String nameLt;
+  final String nameTr;
+  final String origin;
+  final int ayatCount;
+  final List<Ayat> ayat;
 
-  Surat({
+  const Surat({
     required this.number,
     required this.name,
     required this.nameLt,
@@ -19,12 +19,12 @@ class Surat {
 }
 
 class Ayat {
-  int number;
-  String content;
-  String contentLt;
-  String contentTr;
+  final int number;
+  final String content;
+  final String contentLt;
+  final String contentTr;
 
-  Ayat({
+  const Ayat({
     required this.number,
     required this.content,
     required this.contentLt,
@@ -32,7 +32,7 @@ class Ayat {
   });
 }
 
-var suratList = [
+const List<Surat> suratList = [
   Surat(
     number: 1,
     name: 'الفاتحة',
@@ -40,7 +40,7 @@ var suratList = [
     nameTr: 'Pembukaan',
     origin: 'Makkiyyah',
     ayatCount: 7,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ',
@@ -92,7 +92,7 @@ var suratList = [
     nameTr: 'Sapi',
     origin: 'Madaniyyah',
     ayatCount: 286,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤمّۤ ۚ',
@@ -1818,7 +1818,7 @@ var suratList = [
     nameTr: 'Keluarga Imran',
     origin: 'Madaniyyah',
     ayatCount: 200,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤمّۤ ',
@@ -3028,7 +3028,7 @@ var suratList = [
     nameTr: 'Wanita',
     origin: 'Madaniyyah',
     ayatCount: 176,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا النَّاسُ اتَّقُوْا رَبَّكُمُ الَّذِيْ خَلَقَكُمْ مِّنْ نَّفْسٍ وَّاحِدَةٍ وَّخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًا كَثِيْرًا وَّنِسَاۤءً ۚ وَاتَّقُوا اللّٰهَ الَّذِيْ تَسَاۤءَلُوْنَ بِهٖ وَالْاَرْحَامَ ۗ اِنَّ اللّٰهَ كَانَ عَلَيْكُمْ رَقِيْبًا',
@@ -4094,7 +4094,7 @@ var suratList = [
     nameTr: 'Hidangan',
     origin: 'Madaniyyah',
     ayatCount: 120,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اَوْفُوْا بِالْعُقُوْدِۗ  اُحِلَّتْ لَكُمْ بَهِيْمَةُ الْاَنْعَامِ اِلَّا مَا يُتْلٰى عَلَيْكُمْ غَيْرَ مُحِلِّى الصَّيْدِ وَاَنْتُمْ حُرُمٌۗ  اِنَّ اللّٰهَ يَحْكُمُ مَا يُرِيْدُ',
@@ -4824,7 +4824,7 @@ var suratList = [
     nameTr: 'Binatang Ternak',
     origin: 'Makkiyyah',
     ayatCount: 165,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْحَمْدُ لِلّٰهِ الَّذِيْ خَلَقَ السَّمٰوٰتِ وَالْاَرْضَ وَجَعَلَ الظُّلُمٰتِ وَالنُّوْرَ ەۗ ثُمَّ الَّذِيْنَ كَفَرُوْا بِرَبِّهِمْ يَعْدِلُوْنَ',
@@ -5824,7 +5824,7 @@ var suratList = [
     nameTr: 'Tempat Tertinggi',
     origin: 'Makkiyyah',
     ayatCount: 206,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤمّۤصۤ ۚ ',
@@ -7070,7 +7070,7 @@ var suratList = [
     nameTr: 'Rampasan Perang',
     origin: 'Madaniyyah',
     ayatCount: 75,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يَسْـَٔلُوْنَكَ عَنِ الْاَنْفَالِۗ قُلِ الْاَنْفَالُ لِلّٰهِ وَالرَّسُوْلِۚ فَاتَّقُوا اللّٰهَ وَاَصْلِحُوْا ذَاتَ بَيْنِكُمْ ۖوَاَطِيْعُوا اللّٰهَ وَرَسُوْلَهٗٓ اِنْ كُنْتُمْ مُّؤْمِنِيْنَ',
@@ -7530,7 +7530,7 @@ var suratList = [
     nameTr: 'Pengampunan',
     origin: 'Madaniyyah',
     ayatCount: 129,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'بَرَاۤءَةٌ مِّنَ اللّٰهِ وَرَسُوْلِهٖٓ اِلَى الَّذِيْنَ عَاهَدْتُّمْ مِّنَ الْمُشْرِكِيْنَۗ',
@@ -8314,7 +8314,7 @@ var suratList = [
     nameTr: 'Yunus',
     origin: 'Makkiyyah',
     ayatCount: 109,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤرٰ ۗتِلْكَ اٰيٰتُ الْكِتٰبِ الْحَكِيْمِ ',
@@ -8978,7 +8978,7 @@ var suratList = [
     nameTr: 'Hud',
     origin: 'Makkiyyah',
     ayatCount: 123,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤرٰ ۗ كِتٰبٌ اُحْكِمَتْ اٰيٰتُهٗ ثُمَّ فُصِّلَتْ مِنْ لَّدُنْ حَكِيْمٍ خَبِيْرٍۙ',
@@ -9726,7 +9726,7 @@ var suratList = [
     nameTr: 'Yusuf',
     origin: 'Makkiyyah',
     ayatCount: 111,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤرٰ ۗ تِلْكَ اٰيٰتُ الْكِتٰبِ الْمُبِيْنِۗ  ',
@@ -10402,7 +10402,7 @@ var suratList = [
     nameTr: 'Guruh',
     origin: 'Madaniyyah',
     ayatCount: 43,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤمّۤرٰۗ تِلْكَ اٰيٰتُ الْكِتٰبِۗ وَالَّذِيْٓ اُنْزِلَ اِلَيْكَ مِنْ رَّبِّكَ الْحَقُّ وَلٰكِنَّ اَكْثَرَ النَّاسِ لَا يُؤْمِنُوْنَ ',
@@ -10670,7 +10670,7 @@ var suratList = [
     nameTr: 'Ibrahim',
     origin: 'Makkiyyah',
     ayatCount: 52,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤرٰ ۗ كِتٰبٌ اَنْزَلْنٰهُ اِلَيْكَ لِتُخْرِجَ النَّاسَ مِنَ الظُّلُمٰتِ اِلَى النُّوْرِ ەۙ بِاِذْنِ رَبِّهِمْ اِلٰى صِرَاطِ الْعَزِيْزِ الْحَمِيْدِۙ',
@@ -10992,7 +10992,7 @@ var suratList = [
     nameTr: 'Hijr',
     origin: 'Makkiyyah',
     ayatCount: 99,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤرٰ ۗتِلْكَ اٰيٰتُ الْكِتٰبِ وَقُرْاٰنٍ مُّبِيْنٍ  ۔',
@@ -11596,7 +11596,7 @@ var suratList = [
     nameTr: 'Lebah',
     origin: 'Makkiyyah',
     ayatCount: 128,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَتٰىٓ اَمْرُ اللّٰهِ فَلَا تَسْتَعْجِلُوْهُ ۗسُبْحٰنَهٗ وَتَعٰلٰى عَمَّا يُشْرِكُوْنَ ',
@@ -12374,7 +12374,7 @@ var suratList = [
     nameTr: 'Memperjalankan Malam Hari',
     origin: 'Makkiyyah',
     ayatCount: 111,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سُبْحٰنَ الَّذِيْٓ اَسْرٰى بِعَبْدِهٖ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ اِلَى الْمَسْجِدِ الْاَقْصَا الَّذِيْ بٰرَكْنَا حَوْلَهٗ لِنُرِيَهٗ مِنْ اٰيٰتِنَاۗ اِنَّهٗ هُوَ السَّمِيْعُ الْبَصِيْرُ',
@@ -13050,7 +13050,7 @@ var suratList = [
     nameTr: 'Goa',
     origin: 'Makkiyyah',
     ayatCount: 110,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْحَمْدُ لِلّٰهِ الَّذِيْٓ اَنْزَلَ عَلٰى عَبْدِهِ الْكِتٰبَ وَلَمْ يَجْعَلْ لَّهٗ عِوَجًا ۜ',
@@ -13720,7 +13720,7 @@ var suratList = [
     nameTr: 'Maryam',
     origin: 'Makkiyyah',
     ayatCount: 98,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'كۤهٰيٰعۤصۤ ۚ ',
@@ -14318,7 +14318,7 @@ var suratList = [
     nameTr: 'Taha',
     origin: 'Makkiyyah',
     ayatCount: 135,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'طٰهٰ ۚ',
@@ -15138,7 +15138,7 @@ var suratList = [
     nameTr: 'Para Nabi',
     origin: 'Makkiyyah',
     ayatCount: 112,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِيْ غَفْلَةٍ مُّعْرِضُوْنَ ۚ ',
@@ -15820,7 +15820,7 @@ var suratList = [
     nameTr: 'Haji',
     origin: 'Madaniyyah',
     ayatCount: 78,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا النَّاسُ اتَّقُوْا رَبَّكُمْۚ اِنَّ زَلْزَلَةَ السَّاعَةِ شَيْءٌ عَظِيْمٌ ',
@@ -16298,7 +16298,7 @@ var suratList = [
     nameTr: 'Orang-Orang Mukmin',
     origin: 'Makkiyyah',
     ayatCount: 118,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' قَدْ اَفْلَحَ الْمُؤْمِنُوْنَ ۙ',
@@ -17016,7 +17016,7 @@ var suratList = [
     nameTr: 'Cahaya',
     origin: 'Madaniyyah',
     ayatCount: 64,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سُوْرَةٌ اَنْزَلْنٰهَا وَفَرَضْنٰهَا وَاَنْزَلْنَا فِيْهَآ اٰيٰتٍۢ بَيِّنٰتٍ لَّعَلَّكُمْ تَذَكَّرُوْنَ',
@@ -17410,7 +17410,7 @@ var suratList = [
     nameTr: 'Pembeda',
     origin: 'Makkiyyah',
     ayatCount: 77,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'تَبٰرَكَ الَّذِيْ نَزَّلَ الْفُرْقَانَ عَلٰى عَبْدِهٖ لِيَكُوْنَ لِلْعٰلَمِيْنَ نَذِيْرًا ۙ',
@@ -17882,7 +17882,7 @@ var suratList = [
     nameTr: 'Para Penyair',
     origin: 'Makkiyyah',
     ayatCount: 227,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'طٰسۤمّۤ ',
@@ -19254,7 +19254,7 @@ var suratList = [
     nameTr: 'Semut-semut',
     origin: 'Makkiyyah',
     ayatCount: 93,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'طٰسۤ ۚ تِلْكَ اٰيٰتُ الْقُرْاٰنِ وَكِتَابٍ مُّبِيْنٍ ۙ ',
@@ -19822,7 +19822,7 @@ var suratList = [
     nameTr: 'Kisah-Kisah',
     origin: 'Makkiyyah',
     ayatCount: 88,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' طٰسۤمّۤ ',
@@ -20360,7 +20360,7 @@ var suratList = [
     nameTr: 'Laba-Laba',
     origin: 'Makkiyyah',
     ayatCount: 69,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'الۤمّۤ ۗ ',
@@ -20784,7 +20784,7 @@ var suratList = [
     nameTr: 'Romawi',
     origin: 'Makkiyyah',
     ayatCount: 60,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' الۤمّۤ ۚ  ',
@@ -21154,7 +21154,7 @@ var suratList = [
     nameTr: 'Luqman',
     origin: 'Makkiyyah',
     ayatCount: 34,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' الۤمّۤ ۗ ',
@@ -21368,7 +21368,7 @@ var suratList = [
     nameTr: 'Sajdah',
     origin: 'Makkiyyah',
     ayatCount: 30,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' الۤمّۤ ۗ ',
@@ -21558,7 +21558,7 @@ var suratList = [
     nameTr: 'Golongan Yang Bersekutu',
     origin: 'Madaniyyah',
     ayatCount: 73,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا النَّبِيُّ اتَّقِ اللّٰهَ وَلَا تُطِعِ الْكٰفِرِيْنَ وَالْمُنٰفِقِيْنَ ۗاِنَّ اللّٰهَ كَانَ عَلِيْمًا حَكِيْمًاۙ ',
@@ -22006,7 +22006,7 @@ var suratList = [
     nameTr: 'Saba\'',
     origin: 'Makkiyyah',
     ayatCount: 54,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْحَمْدُ لِلّٰهِ الَّذِيْ لَهٗ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ وَلَهُ الْحَمْدُ فِى الْاٰخِرَةِۗ وَهُوَ الْحَكِيْمُ الْخَبِيْرُ',
@@ -22340,7 +22340,7 @@ var suratList = [
     nameTr: 'Maha Pencipta',
     origin: 'Makkiyyah',
     ayatCount: 45,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْحَمْدُ لِلّٰهِ فَاطِرِ السَّمٰوٰتِ وَالْاَرْضِ جَاعِلِ الْمَلٰۤىِٕكَةِ رُسُلًاۙ اُولِيْٓ اَجْنِحَةٍ مَّثْنٰى وَثُلٰثَ وَرُبٰعَۗ يَزِيْدُ فِى الْخَلْقِ مَا يَشَاۤءُۗ اِنَّ اللّٰهَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ ',
@@ -22620,7 +22620,7 @@ var suratList = [
     nameTr: 'Yasin',
     origin: 'Makkiyyah',
     ayatCount: 83,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰسۤ ۚ',
@@ -23128,7 +23128,7 @@ var suratList = [
     nameTr: 'Barisan-Barisan',
     origin: 'Makkiyyah',
     ayatCount: 182,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالصّٰۤفّٰتِ صَفًّاۙ',
@@ -24230,7 +24230,7 @@ var suratList = [
     nameTr: 'Sad',
     origin: 'Makkiyyah',
     ayatCount: 88,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'صۤ ۗوَالْقُرْاٰنِ ذِى الذِّكْرِۗ',
@@ -24768,7 +24768,7 @@ var suratList = [
     nameTr: 'Rombongan',
     origin: 'Makkiyyah',
     ayatCount: 75,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' تَنْزِيْلُ الْكِتٰبِ مِنَ اللّٰهِ الْعَزِيْزِ الْحَكِيْمِ ',
@@ -25228,7 +25228,7 @@ var suratList = [
     nameTr: 'Maha Pengampun',
     origin: 'Makkiyyah',
     ayatCount: 85,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'حٰمۤ  ۚ ',
@@ -25748,7 +25748,7 @@ var suratList = [
     nameTr: 'Yang Dijelaskan',
     origin: 'Makkiyyah',
     ayatCount: 54,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' حٰمۤ ۚ ',
@@ -26082,7 +26082,7 @@ var suratList = [
     nameTr: 'Musyawarah',
     origin: 'Makkiyyah',
     ayatCount: 53,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' حٰمۤ  ۚ ',
@@ -26410,7 +26410,7 @@ var suratList = [
     nameTr: 'Perhiasan',
     origin: 'Makkiyyah',
     ayatCount: 89,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' حٰمۤ  ۚ ',
@@ -26954,7 +26954,7 @@ var suratList = [
     nameTr: 'Kabut',
     origin: 'Makkiyyah',
     ayatCount: 59,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'حٰمۤ  ۚ ',
@@ -27318,7 +27318,7 @@ var suratList = [
     nameTr: 'Berlutut',
     origin: 'Makkiyyah',
     ayatCount: 37,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'حٰمۤ  ۚ',
@@ -27550,7 +27550,7 @@ var suratList = [
     nameTr: 'Bukit Pasir',
     origin: 'Makkiyyah',
     ayatCount: 35,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'حٰمۤ  ۚ',
@@ -27770,7 +27770,7 @@ var suratList = [
     nameTr: 'Muhammad',
     origin: 'Madaniyyah',
     ayatCount: 38,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلَّذِيْنَ كَفَرُوْا وَصَدُّوْا عَنْ سَبِيْلِ اللّٰهِ اَضَلَّ اَعْمَالَهُمْ ',
@@ -28008,7 +28008,7 @@ var suratList = [
     nameTr: 'Kemenangan',
     origin: 'Madaniyyah',
     ayatCount: 29,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' اِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِيْنًاۙ',
@@ -28192,7 +28192,7 @@ var suratList = [
     nameTr: 'Kamar-Kamar',
     origin: 'Madaniyyah',
     ayatCount: 18,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْا لَا تُقَدِّمُوْا بَيْنَ يَدَيِ اللّٰهِ وَرَسُوْلِهٖ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ سَمِيْعٌ عَلِيْمٌ ',
@@ -28310,7 +28310,7 @@ var suratList = [
     nameTr: 'Qaf',
     origin: 'Makkiyyah',
     ayatCount: 45,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' قۤ  ۗوَالْقُرْاٰنِ الْمَجِيْدِ  ۖ ',
@@ -28590,7 +28590,7 @@ var suratList = [
     nameTr: 'Angin yang Menerbangkan',
     origin: 'Makkiyyah',
     ayatCount: 60,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: ' وَالذّٰرِيٰتِ ذَرْوًاۙ',
@@ -28960,7 +28960,7 @@ var suratList = [
     nameTr: 'Bukit Tursina',
     origin: 'Makkiyyah',
     ayatCount: 49,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالطُّوْرِۙ  ',
@@ -29264,7 +29264,7 @@ var suratList = [
     nameTr: 'Bintang',
     origin: 'Makkiyyah',
     ayatCount: 62,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالنَّجْمِ اِذَا هَوٰىۙ ',
@@ -29646,7 +29646,7 @@ var suratList = [
     nameTr: 'Bulan',
     origin: 'Makkiyyah',
     ayatCount: 55,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِقْتَرَبَتِ السَّاعَةُ وَانْشَقَّ الْقَمَرُ ',
@@ -29986,7 +29986,7 @@ var suratList = [
     nameTr: 'Maha Pengasih',
     origin: 'Madaniyyah',
     ayatCount: 78,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلرَّحْمٰنُۙ  ',
@@ -30464,7 +30464,7 @@ var suratList = [
     nameTr: 'Hari Kiamat',
     origin: 'Makkiyyah',
     ayatCount: 96,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا وَقَعَتِ الْوَاقِعَةُۙ ',
@@ -31050,7 +31050,7 @@ var suratList = [
     nameTr: 'Besi',
     origin: 'Madaniyyah',
     ayatCount: 29,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سَبَّحَ لِلّٰهِ مَا فِى السَّمٰوٰتِ وَالْاَرْضِۚ وَهُوَ الْعَزِيْزُ الْحَكِيْمُ ',
@@ -31234,7 +31234,7 @@ var suratList = [
     nameTr: 'Gugatan',
     origin: 'Madaniyyah',
     ayatCount: 22,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قَدْ سَمِعَ اللّٰهُ قَوْلَ الَّتِيْ تُجَادِلُكَ فِيْ زَوْجِهَا وَتَشْتَكِيْٓ اِلَى اللّٰهِ  ۖوَاللّٰهُ يَسْمَعُ تَحَاوُرَكُمَاۗ اِنَّ اللّٰهَ سَمِيْعٌۢ بَصِيْرٌ ',
@@ -31376,7 +31376,7 @@ var suratList = [
     nameTr: 'Pengusiran',
     origin: 'Madaniyyah',
     ayatCount: 24,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سَبَّحَ لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۚ وَهُوَ الْعَزِيْزُ الْحَكِيْمُ ',
@@ -31530,7 +31530,7 @@ var suratList = [
     nameTr: 'Wanita Yang Diuji',
     origin: 'Madaniyyah',
     ayatCount: 13,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْا لَا تَتَّخِذُوْا عَدُوِّيْ وَعَدُوَّكُمْ اَوْلِيَاۤءَ تُلْقُوْنَ اِلَيْهِمْ بِالْمَوَدَّةِ وَقَدْ كَفَرُوْا بِمَا جَاۤءَكُمْ مِّنَ الْحَقِّۚ  يُخْرِجُوْنَ الرَّسُوْلَ وَاِيَّاكُمْ اَنْ تُؤْمِنُوْا بِاللّٰهِ رَبِّكُمْۗ اِنْ كُنْتُمْ خَرَجْتُمْ جِهَادًا فِيْ سَبِيْلِيْ وَابْتِغَاۤءَ مَرْضَاتِيْ تُسِرُّوْنَ اِلَيْهِمْ بِالْمَوَدَّةِ وَاَنَا۠ اَعْلَمُ بِمَآ اَخْفَيْتُمْ وَمَآ اَعْلَنْتُمْۗ وَمَنْ يَّفْعَلْهُ مِنْكُمْ فَقَدْ ضَلَّ سَوَاۤءَ السَّبِيْلِ ',
@@ -31618,7 +31618,7 @@ var suratList = [
     nameTr: 'Barisan',
     origin: 'Madaniyyah',
     ayatCount: 14,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سَبَّحَ لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۚ وَهُوَ الْعَزِيْزُ الْحَكِيْمُ ',
@@ -31712,7 +31712,7 @@ var suratList = [
     nameTr: 'Jumat',
     origin: 'Madaniyyah',
     ayatCount: 11,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يُسَبِّحُ لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ الْمَلِكِ الْقُدُّوْسِ الْعَزِيْزِ الْحَكِيْمِ ',
@@ -31788,7 +31788,7 @@ var suratList = [
     nameTr: 'Orang-Orang Munafik',
     origin: 'Madaniyyah',
     ayatCount: 11,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا جَاۤءَكَ الْمُنٰفِقُوْنَ قَالُوْا نَشْهَدُ اِنَّكَ لَرَسُوْلُ اللّٰهِ ۘوَاللّٰهُ يَعْلَمُ اِنَّكَ لَرَسُوْلُهٗ ۗوَاللّٰهُ يَشْهَدُ اِنَّ الْمُنٰفِقِيْنَ لَكٰذِبُوْنَۚ ',
@@ -31864,7 +31864,7 @@ var suratList = [
     nameTr: 'Pengungkapan Kesalahan',
     origin: 'Madaniyyah',
     ayatCount: 18,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يُسَبِّحُ لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُۖ وَهُوَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ ',
@@ -31982,7 +31982,7 @@ var suratList = [
     nameTr: 'Talak',
     origin: 'Madaniyyah',
     ayatCount: 12,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا النَّبِيُّ اِذَا طَلَّقْتُمُ النِّسَاۤءَ فَطَلِّقُوْهُنَّ لِعِدَّتِهِنَّ وَاَحْصُوا الْعِدَّةَۚ وَاتَّقُوا اللّٰهَ رَبَّكُمْۚ  لَا تُخْرِجُوْهُنَّ مِنْۢ بُيُوْتِهِنَّ وَلَا يَخْرُجْنَ اِلَّآ اَنْ يَّأْتِيْنَ بِفَاحِشَةٍ مُّبَيِّنَةٍۗ وَتِلْكَ حُدُوْدُ اللّٰهِ ۗوَمَنْ يَّتَعَدَّ حُدُوْدَ اللّٰهِ فَقَدْ ظَلَمَ نَفْسَهٗ ۗ لَا تَدْرِيْ لَعَلَّ اللّٰهَ يُحْدِثُ بَعْدَ ذٰلِكَ اَمْرًا',
@@ -32064,7 +32064,7 @@ var suratList = [
     nameTr: 'Pengharaman',
     origin: 'Madaniyyah',
     ayatCount: 12,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا النَّبِيُّ لِمَ تُحَرِّمُ مَآ اَحَلَّ اللّٰهُ لَكَۚ تَبْتَغِيْ مَرْضَاتَ اَزْوَاجِكَۗ وَاللّٰهُ غَفُوْرٌ رَّحِيْمٌ ',
@@ -32146,7 +32146,7 @@ var suratList = [
     nameTr: 'Kerajaan',
     origin: 'Makkiyyah',
     ayatCount: 30,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'تَبٰرَكَ الَّذِيْ بِيَدِهِ الْمُلْكُۖ وَهُوَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌۙ',
@@ -32336,7 +32336,7 @@ var suratList = [
     nameTr: 'Pena',
     origin: 'Makkiyyah',
     ayatCount: 52,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'نۤ ۚوَالْقَلَمِ وَمَا يَسْطُرُوْنَۙ',
@@ -32658,7 +32658,7 @@ var suratList = [
     nameTr: 'Hari Kiamat',
     origin: 'Makkiyyah',
     ayatCount: 52,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْحَاۤقَّةُۙ',
@@ -32980,7 +32980,7 @@ var suratList = [
     nameTr: 'Tempat Naik',
     origin: 'Makkiyyah',
     ayatCount: 44,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سَاَلَ سَاۤىِٕلٌۢ بِعَذَابٍ وَّاقِعٍۙ',
@@ -33254,7 +33254,7 @@ var suratList = [
     nameTr: 'Nuh',
     origin: 'Makkiyyah',
     ayatCount: 28,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِنَّآ اَرْسَلْنَا نُوْحًا اِلٰى قَوْمِهٖٓ اَنْ اَنْذِرْ قَوْمَكَ مِنْ قَبْلِ اَنْ يَّأْتِيَهُمْ عَذَابٌ اَلِيْمٌ ',
@@ -33432,7 +33432,7 @@ var suratList = [
     nameTr: 'Jin',
     origin: 'Makkiyyah',
     ayatCount: 28,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قُلْ اُوْحِيَ اِلَيَّ اَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوْٓا اِنَّا سَمِعْنَا قُرْاٰنًا عَجَبًاۙ',
@@ -33610,7 +33610,7 @@ var suratList = [
     nameTr: 'Orang Yang Berselimut',
     origin: 'Makkiyyah',
     ayatCount: 20,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا الْمُزَّمِّلُۙ',
@@ -33740,7 +33740,7 @@ var suratList = [
     nameTr: 'Orang Yang Berkemul',
     origin: 'Makkiyyah',
     ayatCount: 56,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'يٰٓاَيُّهَا الْمُدَّثِّرُۙ',
@@ -34086,7 +34086,7 @@ var suratList = [
     nameTr: 'Hari Kiamat',
     origin: 'Makkiyyah',
     ayatCount: 40,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'لَآ اُقْسِمُ بِيَوْمِ الْقِيٰمَةِۙ',
@@ -34336,7 +34336,7 @@ var suratList = [
     nameTr: 'Manusia',
     origin: 'Madaniyyah',
     ayatCount: 31,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'هَلْ اَتٰى عَلَى الْاِنْسَانِ حِيْنٌ مِّنَ الدَّهْرِ لَمْ يَكُنْ شَيْـًٔا مَّذْكُوْرًا ',
@@ -34532,7 +34532,7 @@ var suratList = [
     nameTr: 'Malaikat Yang Diutus',
     origin: 'Makkiyyah',
     ayatCount: 50,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالْمُرْسَلٰتِ عُرْفًاۙ',
@@ -34842,7 +34842,7 @@ var suratList = [
     nameTr: 'Berita Besar',
     origin: 'Makkiyyah',
     ayatCount: 40,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'عَمَّ يَتَسَاۤءَلُوْنَۚ ',
@@ -35092,7 +35092,7 @@ var suratList = [
     nameTr: 'Malaikat Yang Mencabut',
     origin: 'Makkiyyah',
     ayatCount: 46,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالنّٰزِعٰتِ غَرْقًاۙ',
@@ -35378,7 +35378,7 @@ var suratList = [
     nameTr: 'Bermuka Masam',
     origin: 'Makkiyyah',
     ayatCount: 42,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'عَبَسَ وَتَوَلّٰىٓۙ',
@@ -35640,7 +35640,7 @@ var suratList = [
     nameTr: 'Penggulungan',
     origin: 'Makkiyyah',
     ayatCount: 29,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا الشَّمْسُ كُوِّرَتْۖ',
@@ -35824,7 +35824,7 @@ var suratList = [
     nameTr: 'Terbelah',
     origin: 'Makkiyyah',
     ayatCount: 19,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا السَّمَاۤءُ انْفَطَرَتْۙ',
@@ -35948,7 +35948,7 @@ var suratList = [
     nameTr: 'Orang-Orang Curang',
     origin: 'Makkiyyah',
     ayatCount: 36,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَيْلٌ لِّلْمُطَفِّفِيْنَۙ',
@@ -36174,7 +36174,7 @@ var suratList = [
     nameTr: 'Terbelah',
     origin: 'Makkiyyah',
     ayatCount: 25,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا السَّمَاۤءُ انْشَقَّتْۙ ',
@@ -36334,7 +36334,7 @@ var suratList = [
     nameTr: 'Gugusan Bintang',
     origin: 'Makkiyyah',
     ayatCount: 22,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالسَّمَاۤءِ ذَاتِ الْبُرُوْجِۙ ',
@@ -36476,7 +36476,7 @@ var suratList = [
     nameTr: 'Yang Datang Di Malam Hari',
     origin: 'Makkiyyah',
     ayatCount: 17,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالسَّمَاۤءِ وَالطَّارِقِۙ ',
@@ -36588,7 +36588,7 @@ var suratList = [
     nameTr: 'Maha Tinggi',
     origin: 'Makkiyyah',
     ayatCount: 19,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'سَبِّحِ اسْمَ رَبِّكَ الْاَعْلَىۙ ',
@@ -36712,7 +36712,7 @@ var suratList = [
     nameTr: 'Hari Kiamat',
     origin: 'Makkiyyah',
     ayatCount: 26,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'هَلْ اَتٰىكَ حَدِيْثُ الْغَاشِيَةِۗ',
@@ -36878,7 +36878,7 @@ var suratList = [
     nameTr: 'Fajar',
     origin: 'Makkiyyah',
     ayatCount: 30,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالْفَجْرِۙ',
@@ -37068,7 +37068,7 @@ var suratList = [
     nameTr: 'Negeri',
     origin: 'Makkiyyah',
     ayatCount: 20,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'لَآ اُقْسِمُ بِهٰذَا الْبَلَدِۙ',
@@ -37198,7 +37198,7 @@ var suratList = [
     nameTr: 'Matahari',
     origin: 'Makkiyyah',
     ayatCount: 15,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالشَّمْسِ وَضُحٰىهَاۖ',
@@ -37298,7 +37298,7 @@ var suratList = [
     nameTr: 'Malam',
     origin: 'Makkiyyah',
     ayatCount: 21,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالَّيْلِ اِذَا يَغْشٰىۙ',
@@ -37434,7 +37434,7 @@ var suratList = [
     nameTr: 'Duha',
     origin: 'Makkiyyah',
     ayatCount: 11,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالضُّحٰىۙ',
@@ -37510,7 +37510,7 @@ var suratList = [
     nameTr: 'Lapang',
     origin: 'Makkiyyah',
     ayatCount: 8,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلَمْ نَشْرَحْ لَكَ صَدْرَكَۙ',
@@ -37568,7 +37568,7 @@ var suratList = [
     nameTr: 'Buah Tin',
     origin: 'Makkiyyah',
     ayatCount: 8,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالتِّيْنِ وَالزَّيْتُوْنِۙ',
@@ -37626,7 +37626,7 @@ var suratList = [
     nameTr: 'Segumpal Darah',
     origin: 'Makkiyyah',
     ayatCount: 19,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِقْرَأْ بِاسْمِ رَبِّكَ الَّذِيْ خَلَقَۚ',
@@ -37750,7 +37750,7 @@ var suratList = [
     nameTr: 'Kemuliaan',
     origin: 'Makkiyyah',
     ayatCount: 5,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِنَّآ اَنْزَلْنٰهُ فِيْ لَيْلَةِ الْقَدْرِ ',
@@ -37790,7 +37790,7 @@ var suratList = [
     nameTr: 'Bukti Nyata',
     origin: 'Madaniyyah',
     ayatCount: 8,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'لَمْ يَكُنِ الَّذِيْنَ كَفَرُوْا مِنْ اَهْلِ الْكِتٰبِ وَالْمُشْرِكِيْنَ مُنْفَكِّيْنَ حَتّٰى تَأْتِيَهُمُ الْبَيِّنَةُۙ',
@@ -37848,7 +37848,7 @@ var suratList = [
     nameTr: 'Guncangan',
     origin: 'Madaniyyah',
     ayatCount: 8,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا زُلْزِلَتِ الْاَرْضُ زِلْزَالَهَاۙ',
@@ -37906,7 +37906,7 @@ var suratList = [
     nameTr: 'Kuda Yang Berlari Kencang',
     origin: 'Makkiyyah',
     ayatCount: 11,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالْعٰدِيٰتِ ضَبْحًاۙ ',
@@ -37982,7 +37982,7 @@ var suratList = [
     nameTr: 'Hari Kiamat',
     origin: 'Makkiyyah',
     ayatCount: 11,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْقَارِعَةُۙ',
@@ -38058,7 +38058,7 @@ var suratList = [
     nameTr: 'Bermegah-Megahan',
     origin: 'Makkiyyah',
     ayatCount: 8,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلْهٰىكُمُ التَّكَاثُرُۙ',
@@ -38116,7 +38116,7 @@ var suratList = [
     nameTr: 'Asar',
     origin: 'Makkiyyah',
     ayatCount: 3,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَالْعَصْرِۙ',
@@ -38144,7 +38144,7 @@ var suratList = [
     nameTr: 'Pengumpat',
     origin: 'Makkiyyah',
     ayatCount: 9,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍۙ',
@@ -38208,7 +38208,7 @@ var suratList = [
     nameTr: 'Gajah',
     origin: 'Makkiyyah',
     ayatCount: 5,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِاَصْحٰبِ الْفِيْلِۗ',
@@ -38248,7 +38248,7 @@ var suratList = [
     nameTr: 'Quraisy',
     origin: 'Makkiyyah',
     ayatCount: 4,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'لِاِيْلٰفِ قُرَيْشٍۙ',
@@ -38282,7 +38282,7 @@ var suratList = [
     nameTr: 'Barang Yang Berguna',
     origin: 'Makkiyyah',
     ayatCount: 7,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اَرَءَيْتَ الَّذِيْ يُكَذِّبُ بِالدِّيْنِۗ',
@@ -38334,7 +38334,7 @@ var suratList = [
     nameTr: 'Pemberian Yang Banyak',
     origin: 'Makkiyyah',
     ayatCount: 3,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِنَّآ اَعْطَيْنٰكَ الْكَوْثَرَۗ',
@@ -38362,7 +38362,7 @@ var suratList = [
     nameTr: 'Orang-Orang kafir',
     origin: 'Makkiyyah',
     ayatCount: 6,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قُلْ يٰٓاَيُّهَا الْكٰفِرُوْنَۙ',
@@ -38408,7 +38408,7 @@ var suratList = [
     nameTr: 'Pertolongan',
     origin: 'Madaniyyah',
     ayatCount: 3,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'اِذَا جَاۤءَ نَصْرُ اللّٰهِ وَالْفَتْحُۙ',
@@ -38436,7 +38436,7 @@ var suratList = [
     nameTr: 'Api Yang Bergejolak',
     origin: 'Makkiyyah',
     ayatCount: 5,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'تَبَّتْ يَدَآ اَبِيْ لَهَبٍ وَّتَبَّۗ',
@@ -38476,7 +38476,7 @@ var suratList = [
     nameTr: 'Ikhlas',
     origin: 'Makkiyyah',
     ayatCount: 4,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قُلْ هُوَ اللّٰهُ اَحَدٌۚ',
@@ -38510,7 +38510,7 @@ var suratList = [
     nameTr: 'Subuh',
     origin: 'Makkiyyah',
     ayatCount: 5,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قُلْ اَعُوْذُ بِرَبِّ الْفَلَقِۙ',
@@ -38550,7 +38550,7 @@ var suratList = [
     nameTr: 'Manusia',
     origin: 'Makkiyyah',
     ayatCount: 6,
-    ayat: [
+    ayat: <Ayat>[
       Ayat(
         number: 1,
         content: 'قُلْ اَعُوْذُ بِرَبِّ النَّاسِۙ',
